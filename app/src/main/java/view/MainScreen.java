@@ -8,6 +8,8 @@ import controller.ProjectController;
 import controller.TaskController;
 import java.awt.Color;
 import java.awt.Font;
+import javax.swing.DefaultListModel;
+import model.Project;
 
 /**
  *
@@ -18,9 +20,15 @@ public class MainScreen extends javax.swing.JFrame {
     ProjectController projectController;
     TaskController taskController;
     
+    DefaultListModel<Project> projectModel;
+    
+    
+    
     public MainScreen() {
         initComponents();
         decorateTableTask();
+        initDataController();
+        
     }
 
     /**
@@ -382,4 +390,15 @@ public class MainScreen extends javax.swing.JFrame {
         
         
 }
+    
+    public void initDataController(){
+        projectController = new ProjectController();
+        taskController = new TaskController();
+        
+    }
+    
+    public void loadProjects(){
+        
+        
+    }
 }
